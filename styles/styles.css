@@ -1,0 +1,113 @@
+:root{
+    --blue-marin: #2AB3B1;
+    --green-yelow: #C0DF33;
+    --grey: #9AA7BE;
+    --white: #FFFFFF;
+
+    --font-32: 32px;
+    --font-26: 26px;
+    --font-24: 24px;
+    --font-18: 18px;
+    --font-14: 14px;
+}
+
+body{ 
+    color: var(--grey);
+    font-size: var(--font-18);
+    font-family: "Karla", sans-serif;
+}
+.container{
+    margin: auto;
+    display: grid;
+    border: 0 solid;
+    box-shadow: 1px 2px 15px 3px var(--grey);
+}
+.descrition{
+    background-color: var(--white);
+    grid-area: "descrition";
+    padding: 2.5em;
+    display: flex;
+    flex-direction: column;
+    
+}
+.title{
+    color: var(--blue-marin);
+    font-size: var(--font-26);
+    font-weight: 700;
+}
+.d-text{
+    color: var(--green-yelow);
+    font-size: var(--font-18);
+    font-weight: 600;
+}
+.plan{
+    background-color: var(--blue-marin);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-area: "plan";
+    color: var(--white);
+}
+.plan-mouth{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.t-mouth{
+    color: var(--white);
+    font-size: var(--font-26);
+}
+.diner{
+    color: var(--white);
+    font-size: 45px;
+    font-weight: 700;
+}
+.diner-text{
+    font-size: var(--font-18);
+    opacity: 0.7;
+    margin: 10px;
+    text-align: center;
+}
+.button-mouth{
+    background-color: var(--green-yelow);
+    padding: 1em;
+    border-radius: 15px;
+    color: var(--white);
+    font-size: var(--font-24);
+    border: 0;
+    width: 95%;
+}
+.plan-descrition{
+    background-color:#4abebd;
+}
+.plan-descrition, .plan-mouth{
+    padding: 2.5em;
+}
+.t-descrition{
+    font-size: var(--font-26);
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+.list-descrition{
+    font-size: var(--font-14);
+}
+.list{
+    opacity: 0.7;
+    font-size: 16px;
+}
+@media(max-width: 749px){
+    .container{
+        width: 80%;
+    }
+    .plan{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media(min-width: 750px){
+    .container{
+        width: 60%;
+        grid-template-areas: 
+        "descrition"
+        "plan";
+    }
+}
